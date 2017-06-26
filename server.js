@@ -7,7 +7,7 @@ var express = require('express'),
   bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/airlinedb');
+mongoose.connect('mongodb://edlaine:mongodbedlaine@ds139072.mlab.com:39072/airlinedb');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
