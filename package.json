@@ -12,6 +12,7 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
+    "appdynamics": "^4.2.15",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "mongoose": "4.1.9"

@@ -1,3 +1,16 @@
+require("appdynamics").profile({
+ controllerHostName: 'lights201707131419484.saas.appdynamics.com',
+ controllerPort: 443,
+
+ // If SSL, be sure to enable the next line
+ controllerSslEnabled: true,
+ accountName: 'lights201707131419484',
+ accountAccessKey: '8ghuafjju76f',
+ applicationName: 'airline',
+ tierName: 'airline',
+ nodeName: 'process' // The controller will automatically append the node name with a unique number
+});
+
 var express = require('express'),
   app = express(),
   port = process.env.PORT || 3000;

@@ -1,7 +1,7 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-  Flight = mongoose.model('Flight');
+    Flight = mongoose.model('Flight');
 
 exports.list_all_flight = function(req, res) {
   Flight.find({}, function(err, flight) {
