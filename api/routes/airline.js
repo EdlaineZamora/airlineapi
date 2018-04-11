@@ -5,21 +5,21 @@ module.exports = function(app) {
   var passenger = require('../controllers/passenger');
 
   app.route('/flights')
-    .get(flight.list_all_flight)     //Consulta todos os vôos
-    .post(flight.create_a_flight);   //Cria um vôo
+    .get(flight.list_all_flight)
+    .post(flight.create_a_flight);
 
-  app.route('/flights/:flightId')     //Rodas passando o ID do vôo
-    .get(flight.read_a_flight)       //Consulta o vôo
-    .put(flight.update_a_flight)     //Atualiza o vôo
-    .delete(flight.delete_a_flight); //Deleta o vôo
+  app.route('/flights/:flightId')
+    .get(flight.read_a_flight)
+    .put(flight.update_a_flight)
+    .delete(flight.delete_a_flight);
 
   app.route('/passengers')
-    .get(passenger.list_all_passenger)      //Consulta todos passageiros
-    .post(passenger.create_a_passenger);    //Cria um passageiro
+    .get(passenger.list_all_passenger)
+    .post(passenger.create_a_passenger);
 
-  app.route('/passengers/:passengerId')      //Rotas passando o ID do passageiro
-    .get(passenger.read_a_passenger)        //Consulta o passageiro
-    .put(passenger.update_a_passenger)      //Atualiza o passageiro
-    .delete(passenger.delete_a_passenger);  //Deleta o passageiro
+  app.route('/passengers/:passengerId')
+    .get(passenger.read_a_passenger)
+    .put(passenger.update_a_passenger)
+    .delete(passenger.delete_a_passenger);
 
 };
